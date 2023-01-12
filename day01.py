@@ -1,11 +1,11 @@
-#교재 countdown 예제
-# for countdown in 5,4,3,2,1,"hey!":
-#     print(countdown)
-# print('프로그램 종료')
+#교재 dictionary 예제
 
-countdown_list=[5,4,3,2,1,"hey!"]
-for countdown in countdown_list:
-    print(countdown)
-print(countdown_list[3])
-print(countdown_list[-1]) #역방향은 -1부터
-print('프로그램 종료')
+subjects={"의사소통 영어":"A+",
+         '오래된 미래':"B+",
+         '양자역학':"A0",}
+student='신용찬'
+subject='오래된 미래'
+print(student,'학생의',subject,'성적은',subjects['오래된 미래'],'입니다.')
+print(f'{student} 학생의 {subject} 성적은 {subjects[subject]}입니다.') #f스트링 사용 (, 쓸필요없음)
+print("%s 학생의 %s 성적은 %s 입니다."% (student,subject,subjects[subject]))
+print("{0} 학생의 {1} 과목 성적은 {2}입니다.".format(student,subject,subjects[subject]))
