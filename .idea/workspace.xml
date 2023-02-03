@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bbf438e-c4da-4961-a035-00ce8882730f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01_01_temperature.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_01_02_countdown.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_01_03_dictionary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_01_04_GUI.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyy/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +42,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/py&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;
   }
 }</component>
   <component name="RecentsManager">
