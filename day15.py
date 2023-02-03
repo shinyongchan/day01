@@ -1,5 +1,8 @@
-pokemons = ["피카츄", "라이츄", "파이리", "꼬부기", "이상해씨"]
 
+
+def add_data(pokemon):
+    pokemons.append(None)
+    pokemons[len(pokemons)-1] = pokemon
 
 def insert_data(idx, pokemon):
     if idx < 0 or idx > len(pokemons):
@@ -21,22 +24,46 @@ def delete_data(idx):
         return
 
     len_pokemons = len(pokemons)
-    pokemons[idx] = None  # 데이터 삭제
 
+    pokemons[idx] = None  # 데이터 삭제
     for i in range(idx + 1, len_pokemons):
         pokemons[i - 1] = pokemons[i]
         pokemons[i] = None  # 배열의 맨 마지막 위치 삭제
+    # for i in range(idx + 1, len_pokemons):
+    #     pokemons[i - 1] = pokemons[i]
+    #     pokemons[i] = None  # 배열의 맨 마지막 위치 삭제
 
     del (pokemons[len_pokemons - 1])
 
-if __name__ == "__main__":
+pokemons = []
+menu =-1
 
-    delete_data(1)
-    #insert_data(2, '거북왕')
-    print(pokemons)
-    delete_data(3)
-    #insert_data(6, '어니부기')
-    print(pokemons)
+if __name__ == "__main__":
+    while (menu != 4):
+
+        menu = int(input("선택하세요(1: 추가, 2: 삽입, 3: 삭제, 4: 종료)--> "))
+
+        if (menu == 1):
+            data = input("추가할 데이터--> ")
+            add_data(data)
+            print(pokemons)
+        elif (menu == 2):
+            idx = int(input("삽입할 위치--> "))
+            data = input("추가할 데이터--> ")
+            insert_data(idx, data)
+            print(pokemons)
+        elif (menu == 3):
+            idx = int(input("삭제할 위치--> "))
+            delete_data(idx)
+            print(pokemons)
+        elif (menu == 4):
+            print(pokemons)
+            exit
+        else:
+            print("1~4 중 하나를 입력하세요.")
+            continue
+
+
 
 
 
