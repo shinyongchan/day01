@@ -1,51 +1,19 @@
-## 함수 선언 부분 ##
-def print_poly(px, tx):
-                             # 최고차항 숫자 = 배열길이-1
-    polyStr = "P(x) = "
+friends = [('다현', 200), ('정연', 150), ('쯔위', 90), ('사나', 30), ('지효', 15)]
 
-    for i in range(len(px)):
-        coef = px[i]  # 계수
-        term = tx[i]
-        if (coef > 0 and i > 0):
-            polyStr += f'+{coef}x^{term}'
+def add_data(friens, friend):
 
-        elif (coef < 0 or i == 0) :
-            polyStr += f'{coef}x^{term}'
+    for i in range(len(friends)):
+        if friends[i][1] <= friend[1]:
+            friends.insert(i, friend)
+            break
+        elif i == len(friends)-1:
+            friends.append(friend)
+            break
 
 
+name = str(input("이름 :"))
+cnt = int(input("횟수 : "))
+friend = (name, cnt)
 
-
-
-
-
-
-
-    return polyStr
-
-
-def calc_poly(xValue, px, tx):
-    retValue = 0
-    # 최고차항 숫자 = 배열길이-1
-
-    for i in range(len(px)):
-        coef = px[i]  # 계수
-        term = tx[i]
-        retValue += coef * xValue ** term
-
-    return retValue
-
-
-## 전역 변수 선언 부분 ##
-px = [7, -4, 5]  # =
-tx = [300, 20, 0]
-
-## 메인 코드 부분 ##
-if __name__ == "__main__":
-    pStr = print_poly(px,tx)
-    print(pStr)
-
-    xValue = int(input("X 값 : "))
-
-    print(calc_poly(xValue, px, tx))
-
-
+add_data(friends,friend)
+print(friends)
