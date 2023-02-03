@@ -1,19 +1,40 @@
-friends = [('다현', 200), ('정연', 150), ('쯔위', 90), ('사나', 30), ('지효', 15)]
+## 클래스와 함수 선언 부분 ##
+class Node() :
+	def __init__ (self) :
+		self.data = None
+		self.link = None
 
-def add_data(friens, friend):
+def printNodes(start) :
+	current = start
+	if current == None :
+		return
+	print(current.data, end = ' ')
+	while current.link != None:
+		current = current.link
+		print(current.data, end = ' ')
+	print()
 
-    for i in range(len(friends)):
-        if friends[i][1] <= friend[1]:
-            friends.insert(i, friend)
-            break
-        elif i == len(friends)-1:
-            friends.append(friend)
-            break
+## 전역 변수 선언 부분 ##
+memory = []
+head, current, pre = None, None, None
+dataArray = ["다현", "정연", "쯔위", "사나", "지효"]
+
+## 메인 코드 부분 ##
+if __name__ == "__main__" :
+
+	node = Node()		# 첫 번째 노드
+	node.data = dataArray[0]
+	head = node
+	memory.append(node)
+
+	for data in dataArray[1:] :	# 두 번째 이후 노드
+		pre = node
+		node = Node()
+		node.data = data
+		pre.link = node
+		memory.append(node)
+
+	printNodes(head)
 
 
-name = str(input("이름 :"))
-cnt = int(input("횟수 : "))
-friend = (name, cnt)
 
-add_data(friends,friend)
-print(friends)
