@@ -37,6 +37,28 @@ def insert_node(find_data, insert_data) :
 	node = Node(insert_data)                   # 마지막 노드 삽입
 	current.link = node
 
+def delete_nodes(delete_data):
+	global memory, head, current, pre
+
+	if head.data == delete_data:
+		current = head
+		head = head.link
+		del current
+		print("#첫 노드가 삭제됨#")
+		return
+
+	current = head
+	while current.link != None:
+		pre = current
+		current = current.link
+		if current.data == delete_data:
+			pre.link = current.link
+			del current
+			print("#중간 노드가 삭제됨#")
+			return
+	print("#삭제된 노드가 없음#")
+
+
 ## 전역 변수 선언 부분 ##
 memory = []
 head, current, pre = None, None, None
@@ -68,5 +90,12 @@ if __name__ == "__main__" :
 	insert_node("성윤모", "어니부기")
 	print_nodes(head)
 
+	delete_nodes("잠만보")
+	print_nodes(head)
 
+	delete_nodes("어니부기")
+	print_nodes(head)
+
+	delete_nodes("강찬석")
+	print_nodes(head)
 
