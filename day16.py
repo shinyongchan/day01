@@ -58,6 +58,20 @@ def delete_nodes(delete_data):
 			return
 	print("#삭제된 노드가 없음#")
 
+def find_nodes(find_data):
+	global memory, head, pre, current
+
+	current = head
+	if current.data == find_data:
+		return current.data
+
+	while current.link != None:
+		current = current.link
+		if current.data == find_data:
+			return current.data
+
+	return Node(None).data
+
 
 ## 전역 변수 선언 부분 ##
 memory = []
@@ -99,3 +113,4 @@ if __name__ == "__main__" :
 	delete_nodes("강찬석")
 	print_nodes(head)
 
+	print(find_nodes("파이리"))
